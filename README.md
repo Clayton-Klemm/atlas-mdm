@@ -12,10 +12,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Clayton-Klemm/atlas-mdm/actions/workflows/ci.yml"><img src="https://github.com/Clayton-Klemm/atlas-mdm/actions/workflows/ci.yml/badge.svg" alt="Quality gates"></a>
-</p>
-
-<p align="center">
   <a href="#run-with-docker">Run it</a> ·
   <a href="docs/demo-walkthrough.md">Demo walkthrough</a> ·
   <a href="docs/requirements.md">Role alignment</a> ·
