@@ -1,0 +1,59 @@
+name: atlas-mdm
+services:
+  app:
+    build: .
+    image: atlas-mdm:local
+    init: true
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${PORT:-8080}:8080"
+    environment:
+      PORT: "8080"
+      HOST: "0.0.0.0"
+      DB_PATH: /app/data/atlas.sqlite
+      ERP_URL: http://erp:8081
+      ERP_TOKEN: ${ERP_TOKEN:-atlas-local-demo-token}
+      DEMO_MODE: "true"
+      SEED_DEMO: "true"
+    volumes:
+      - atlas-data:/app/data
+    depends_on:
+      erp:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8080/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 10s
+  erp:
+    build: .
+    image: atlas-mdm:local
+    init: true
+    command: [node, src/mock-erp.js]
+    restart: unless-stopped
+    environment:
+      HOST: "0.0.0.0"
+      ERP_PORT: "8081"
+      ERP_DB_PATH: /app/data/erp.sqlite
+      ERP_TOKEN: ${ERP_TOKEN:-atlas-local-demo-token}
+      DEMO_MODE: "true"
+    volumes:
+      - erp-data:/app/data
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8081/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 4s
+      retries: 5
+volumes:
+  atlas-data:
+  erp-data:

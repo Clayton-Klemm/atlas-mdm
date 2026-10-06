@@ -1,0 +1,4 @@
+sku,name,manufacturer,mpn,supplierId,categoryId,uom,voltage,gtin,source
+SUP-CB-30A,30 A single-pole thermal circuit breaker,PrairieVolt,PV-CB30-1P,SUP-001,CIRCUIT_BREAKERS,EA,120,,Fictional supplier catalog — October 2026
+SUP-WIRE-10,10 AWG red THHN copper building wire,Northstar Cableworks,NC-THHN10-RD,SUP-002,WIRE_CABLE,FT,600,,Fictional supplier catalog — October 2026
+SUP-LED-STRIP,LED,LumenForge,LF-STRIP-24,SUP-003,LIGHTING,EA,,,Fictional supplier catalog — October 2026

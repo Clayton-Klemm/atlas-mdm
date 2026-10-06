@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <sku>SUP-CB-30A</sku>
+    <name>30 A single-pole thermal circuit breaker</name>
+    <manufacturer>PrairieVolt</manufacturer>
+    <mpn>PV-CB30-1P</mpn>
+    <supplierId>SUP-001</supplierId>
+    <categoryId>CIRCUIT_BREAKERS</categoryId>
+    <uom>EA</uom>
+    <voltage>120</voltage>
+    <gtin></gtin>
+    <source>Fictional supplier catalog — October 2026</source>
+  </product>
+  <product>
+    <sku>SUP-WIRE-10</sku>
+    <name>10 AWG red THHN copper building wire</name>
+    <manufacturer>Northstar Cableworks</manufacturer>
+    <mpn>NC-THHN10-RD</mpn>
+    <supplierId>SUP-002</supplierId>
+    <categoryId>WIRE_CABLE</categoryId>
+    <uom>FT</uom>
+    <voltage>600</voltage>
+    <gtin></gtin>
+    <source>Fictional supplier catalog — October 2026</source>
+  </product>
+  <product>
+    <sku>SUP-LED-STRIP</sku>
+    <name>LED</name>
+    <manufacturer>LumenForge</manufacturer>
+    <mpn>LF-STRIP-24</mpn>
+    <supplierId>SUP-003</supplierId>
+    <categoryId>LIGHTING</categoryId>
+    <uom>EA</uom>
+    <voltage></voltage>
+    <gtin></gtin>
+    <source>Fictional supplier catalog — October 2026</source>
+  </product>
+</products>

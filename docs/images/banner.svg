@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Atlas MDM</title>
+  <desc id="desc">Trusted product data, from supplier to system. A JavaScript and Docker portfolio demonstration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102421"/><stop offset="1" stop-color="#23463a"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8f7a7"/><stop offset="1" stop-color="#8bcda2"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c7efc4" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1280" height="360" rx="22" fill="url(#bg)"/>
+  <rect width="1280" height="360" rx="22" fill="url(#grid)"/>
+  <circle cx="1120" cy="70" r="230" fill="#d8f7a7" fill-opacity=".025"/>
+  <circle cx="1050" cy="220" r="160" fill="none" stroke="#d8f7a7" stroke-opacity=".07"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="68" y="67" font-size="13" font-weight="700" letter-spacing="4" fill="#b7d5bd">MASTER DATA MANAGEMENT</text>
+    <text x="64" y="149" font-size="72" font-weight="700" letter-spacing="-2" fill="#f3f6e8">Atlas <tspan fill="#d8f7a7">MDM</tspan></text>
+    <text x="68" y="204" font-size="23" fill="#d1e0cf">Trusted product data, from supplier to system.</text>
+    <g font-size="12" font-weight="600" fill="#dce8d7">
+      <rect x="68" y="257" width="114" height="34" rx="17" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".12"/><text x="89" y="279">JAVASCRIPT</text>
+      <rect x="194" y="257" width="102" height="34" rx="17" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".12"/><text x="216" y="279">NODE.JS 24</text>
+      <rect x="308" y="257" width="85" height="34" rx="17" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".12"/><text x="330" y="279">SQLITE</text>
+      <rect x="405" y="257" width="94" height="34" rx="17" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".12"/><text x="426" y="279">DOCKER</text>
+    </g>
+  </g>
+  <g transform="translate(842 75)">
+    <path d="M65 70H207M65 70V193H207M207 70V193M207 132H285" fill="none" stroke="#a7c7ae" stroke-opacity=".6" stroke-width="2"/>
+    <rect x="0" y="33" width="122" height="75" rx="13" fill="#355447" stroke="#7eaa87"/>
+    <rect x="147" y="33" width="122" height="75" rx="13" fill="url(#accent)"/>
+    <rect x="0" y="157" width="122" height="75" rx="13" fill="#355447" stroke="#7eaa87"/>
+    <rect x="147" y="157" width="122" height="75" rx="13" fill="#355447" stroke="#7eaa87"/>
+    <circle cx="289" cy="132" r="18" fill="#d8f7a7"/><path d="m281 132 5 5 10-11" fill="none" stroke="#1c3d2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      <text x="61" y="76" fill="#e4efdc">ONBOARD</text><text x="208" y="76" fill="#1c3d2e">GOVERN</text><text x="61" y="200" fill="#e4efdc">REVIEW</text><text x="208" y="200" fill="#e4efdc">DELIVER</text>
+    </g>
+  </g>
+</svg>

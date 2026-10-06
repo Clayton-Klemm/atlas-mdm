@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#164b43" />
+    <meta
+      name="description"
+      content="Atlas MDM — a working product master data stewardship, approval, and ERP integration portfolio demonstration."
+    />
+    <title>Atlas MDM · Product intelligence, connected.</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="notifications" class="notifications" aria-live="polite" aria-atomic="false"></div>
+    <section id="login-screen" class="login-screen" hidden>
+      <div class="login-story">
+        <a class="brand brand-on-dark" href="/" aria-label="Atlas MDM home"
+          ><span class="brand-mark" aria-hidden="true">a<span>.</span></span
+          ><span>atlas<span class="brand-subtitle">MASTER DATA MANAGEMENT</span></span></a
+        >
+        <div class="story-content">
+          <span class="eyebrow story-eyebrow"
+            ><span class="tiny-dot"></span> GOOD DATA. BETTER CONNECTIONS.</span
+          >
+          <h1>One trusted record.<br />A thousand possibilities.</h1>
+          <p>
+            Bring product data into focus. Enrich every attribute, move through governed approvals,
+            and connect your catalog to the systems that need it.
+          </p>
+          <div class="story-record" aria-label="Example of a governed product record">
+            <div class="story-record-top">
+              <span class="story-icon" aria-hidden="true">▦</span>
+              <div>
+                <span class="story-small">PRODUCT MASTER</span
+                ><strong>Commercial circuit breaker</strong
+                ><span class="story-sku">AT-CB-100 · VOLTERRA ELECTRIC</span>
+              </div>
+              <span class="story-check" aria-label="Approved">✓</span>
+            </div>
+            <div class="story-attributes">
+              <div>
+                <span>QUALITY SCORE</span><strong>100<span>/100</span></strong>
+              </div>
+              <div><span>RECORD STATUS</span><strong class="story-status">Published</strong></div>
+            </div>
+            <div class="story-flow">
+              <span>Supplier</span><span aria-hidden="true">→</span><span>Atlas MDM</span
+              ><span aria-hidden="true">→</span><span>ERP</span>
+            </div>
+          </div>
+          <div class="story-features">
+            <span><span aria-hidden="true">✓</span> Governed workflows</span
+            ><span><span aria-hidden="true">✓</span> Traceable integrations</span>
+          </div>
+        </div>
+        <p class="story-footer">
+          An independent, working portfolio demonstration. Fictional data throughout.
+        </p>
+      </div>
+      <div class="login-main">
+        <span class="demo-label"><span class="tiny-dot"></span> INTERACTIVE PORTFOLIO DEMO</span>
+        <div class="login-form-wrap">
+          <span class="eyebrow">WELCOME TO ATLAS</span>
+          <h2>A clearer view of your data.</h2>
+          <p class="muted">Choose a role to explore the complete product lifecycle.</p>
+          <form id="login-form">
+            <fieldset class="role-picker">
+              <legend>Explore as</legend>
+              <label class="role-choice"
+                ><input type="radio" name="role" value="steward" checked /><span
+                  ><strong>Data steward</strong><small>Create &amp; enrich</small></span
+                ><span class="role-radio" aria-hidden="true"></span
+              ></label>
+              <label class="role-choice"
+                ><input type="radio" name="role" value="reviewer" /><span
+                  ><strong>Reviewer</strong><small>Approve &amp; publish</small></span
+                ><span class="role-radio" aria-hidden="true"></span
+              ></label>
+              <label class="role-choice"
+                ><input type="radio" name="role" value="admin" /><span
+                  ><strong>Administrator</strong><small>Operate &amp; integrate</small></span
+                ><span class="role-radio" aria-hidden="true"></span
+              ></label>
+            </fieldset>
+            <label class="field"
+              >Username<input
+                id="login-username"
+                name="username"
+                autocomplete="username"
+                value="steward"
+                required
+            /></label>
+            <label class="field"
+              >Demo password<input
+                id="login-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                value="AtlasDemo!2026"
+                required
+            /></label>
+            <p class="login-credentials">Demo password: <code>AtlasDemo!2026</code></p>
+            <p id="login-error" class="form-error" role="alert" hidden></p>
+            <button class="button button-primary login-submit" type="submit">
+              <span>Enter the workspace</span><span aria-hidden="true">→</span>
+            </button>
+          </form>
+          <div class="login-note">
+            <span aria-hidden="true">◇</span>
+            <p>
+              Try the steward first. Switch to the reviewer to approve a record, then explore the
+              administrator’s integration controls.
+            </p>
+          </div>
+        </div>
+        <footer class="login-footer">
+          Atlas MDM <span>·</span> Built for the whole data journey
+        </footer>
+      </div>
+    </section>
+    <div id="app-shell" class="app-shell" hidden>
+      <aside id="sidebar" class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Atlas MDM home"
+          ><span class="brand-mark" aria-hidden="true">a<span>.</span></span
+          ><span>atlas<span class="brand-subtitle">MASTER DATA MANAGEMENT</span></span></a
+        >
+        <div class="workspace-label">
+          <span class="workspace-symbol" aria-hidden="true">W</span>
+          <div><strong>Product workspace</strong><span>Demo organization</span></div>
+          <span class="workspace-chevron" aria-hidden="true">⌄</span>
+        </div>
+        <span class="nav-label">WORKSPACE</span>
+        <nav id="primary-nav"></nav>
+        <div class="sidebar-bottom">
+          <div class="sandbox-card">
+            <span class="sandbox-symbol" aria-hidden="true">◇</span
+            ><strong>Your MDM sandbox</strong>
+            <p>Fictional products. Real workflows. Explore every connection.</p>
+            <a href="/api/spec" target="_blank" rel="noopener"
+              >Explore the API <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div id="session-control" class="session-control"></div>
+        </div>
+      </aside>
+      <div class="app-body">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button
+              id="menu-toggle"
+              class="icon-button mobile-menu"
+              aria-label="Open navigation"
+              aria-expanded="false"
+              aria-controls="sidebar"
+            >
+              ☰</button
+            ><span class="topbar-label">Workspace</span
+            ><span class="topbar-divider" aria-hidden="true">/</span
+            ><span id="breadcrumb">Overview</span>
+          </div>
+          <div class="topbar-right">
+            <span class="demo-pill"><span class="tiny-dot"></span>Demo environment</span
+            ><button
+              id="refresh-button"
+              class="icon-button"
+              aria-label="Refresh current view"
+              title="Refresh current view"
+            ></button
+            ><span id="topbar-avatar" class="avatar avatar-small" aria-hidden="true">DS</span>
+          </div>
+        </header>
+        <main id="main-content" tabindex="-1"></main>
+        <footer class="app-footer">
+          <span>Atlas MDM <span class="footer-dot">·</span> Independent portfolio project</span
+          ><span>Governed data. Connected systems.</span>
+        </footer>
+      </div>
+    </div>
+    <div id="initial-loading" class="initial-loading">
+      <span class="brand-mark" aria-hidden="true">a<span>.</span></span>
+      <p>Opening your workspace…</p>
+    </div>
+    <dialog
+      id="product-dialog"
+      class="product-dialog"
+      aria-labelledby="product-dialog-title"
+    ></dialog>
+    <dialog
+      id="comment-dialog"
+      class="comment-dialog"
+      aria-labelledby="comment-dialog-title"
+    ></dialog>
+  </body>
+</html>
