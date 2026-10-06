@@ -1,4 +1,4 @@
-FROM node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+FROM node:25-bookworm-slim@sha256:81db02c4b671288a03915da9534dbd54f96d0e7c24d80ccc54f5b36b2e684370
 LABEL org.opencontainers.image.title="Atlas MDM" \
       org.opencontainers.image.description="Electrical product master data stewardship portfolio" \
       org.opencontainers.image.source="https://github.com/Clayton-Klemm/atlas-mdm"
